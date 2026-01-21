@@ -16,7 +16,9 @@ function Home() {
           </h1>
 
           <a
-            href="https://wa.me/234XXXXXXXXXX"
+            href="https://calendly.com/itikup/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-red-600 px-4 py-2 rounded-full text-sm"
           >
             Book Session
@@ -24,9 +26,21 @@ function Home() {
         </div>
 
         <ul className="flex justify-center gap-3 mt-4 text-sm">
-          <li><Link to="/" className="px-4 py-2 bg-gray-900 rounded-full">Home</Link></li>
-          <li><a href="#programs" className="px-4 py-2 bg-gray-900 rounded-full">Programs</a></li>
-          <li><a href="#contact" className="px-4 py-2 bg-gray-900 rounded-full">Contact</a></li>
+          <li>
+            <Link to="/" className="px-4 py-2 bg-gray-900 rounded-full">
+              Home
+            </Link>
+          </li>
+          <li>
+            <a href="#programs" className="px-4 py-2 bg-gray-900 rounded-full">
+              Programs
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="px-4 py-2 bg-gray-900 rounded-full">
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
 
