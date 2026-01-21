@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function BookSession() {
+function BookSession() {
   return (
     <div className="min-h-screen bg-black text-white px-4 py-16">
       <h1 className="text-3xl font-bold text-center mb-8">
@@ -19,3 +19,5 @@ export default function BookSession() {
     </div>
   );
 }
+
+export default BookSession;
