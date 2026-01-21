@@ -1,23 +1,26 @@
 import React from "react";
 
-function BookSession() {
+export default function BookSession() {
   return (
     <div className="min-h-screen bg-black text-white px-4 py-16">
-      <h1 className="text-3xl font-bold text-center mb-8">
-        Book a Session
-      </h1>
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          Book a Session
+        </h1>
 
-      <div className="max-w-3xl mx-auto bg-gray-950 rounded-2xl overflow-hidden border border-gray-800">
-        <iframe
-          src="https://calendly.com/itikup/30min"
-          width="100%"
-          height="700"
-          frameBorder="0"
-          title="Book Session"
-        />
+        <p className="text-gray-400 text-center mb-10">
+          Schedule a 30-minute consultation and let’s get started.
+        </p>
+
+        <div className="w-full h-[700px] rounded-2xl overflow-hidden border border-gray-800">
+          <iframe
+            src="https://calendly.com/itikup/30min"
+            className="w-full h-full"
+            frameBorder="0"
+            title="Calendly Booking"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
 }
-
-export default BookSession;
