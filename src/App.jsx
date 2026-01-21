@@ -1,3 +1,5 @@
+import BookSession from "./pages/BookSession";
+import BookSession from "./pages/BookSession";
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
@@ -15,14 +17,13 @@ function Home() {
             Voltage Fitness
           </h1>
 
-          <a
-            href="https://calendly.com/itikup/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-red-600 px-4 py-2 rounded-full text-sm"
-          >
-            Book Session
-          </a>
+          <Link
+  to="/book-session"
+  className="bg-red-600 px-4 py-2 rounded-full text-sm"
+>
+  Book Session
+</Link>
+
         </div>
 
         <ul className="flex justify-center gap-3 mt-4 text-sm">
@@ -140,6 +141,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/book-session" element={<BookSession />} />
+        <Route path="/book-session" element={<BookSession />} />
         <Route path="/" element={<Home />} />
         <Route path="/personal-training" element={<PersonalTraining />} />
         <Route path="/online-coaching" element={<OnlineCoaching />} />
