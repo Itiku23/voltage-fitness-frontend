@@ -1,152 +1,136 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-function App() {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
+import PersonalTraining from "./pages/PersonalTraining";
+import OnlineCoaching from "./pages/OnlineCoaching";
+import AthleteConditioning from "./pages/AthleteConditioning";
 
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-
-    try {
-      const res = await fetch(
-        "https://voltage-fitness-backend-1.onrender.com/api/contact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        }
-      );
-
-      if (res.ok) {
-        alert("Message sent successfully!");
-        form.reset();
-      } else {
-        alert("Server error. Try again.");
-      }
-    } catch {
-      alert("Backend not connected.");
-    }
-  };
-
+function Home() {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* NAVBAR */}
-      <nav className="border-b border-gray-800 px-4 sm:px-8 py-4">
-        <div className="flex items-center justify-between">
+      <nav className="border-b border-gray-800 px-4 py-4">
+        <div className="flex justify-between items-center">
           <h1 className="text-lg font-bold text-green-500">
             Voltage Fitness
           </h1>
 
           <a
-            href="#contact"
-            className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-sm font-medium"
+            href="https://wa.me/234XXXXXXXXXX"
+            className="bg-red-600 px-4 py-2 rounded-full text-sm"
           >
             Book Session
           </a>
         </div>
 
-        {/* NAV LINKS */}
         <ul className="flex justify-center gap-3 mt-4 text-sm">
-          {["Home", "About", "Programs", "Contact"].map((item) => (
-            <li key={item}>
-              <a
-                href={`#${item.toLowerCase()}`}
-                className="px-4 py-2 rounded-full bg-gray-900 hover:bg-green-600 transition"
-              >
-                {item}
-              </a>
-            </li>
-          ))}
+          <li><Link to="/" className="px-4 py-2 bg-gray-900 rounded-full">Home</Link></li>
+          <li><a href="#programs" className="px-4 py-2 bg-gray-900 rounded-full">Programs</a></li>
+          <li><a href="#contact" className="px-4 py-2 bg-gray-900 rounded-full">Contact</a></li>
         </ul>
       </nav>
 
       {/* HERO */}
-      <section id="home" className="px-4 sm:px-8 py-20">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div className="text-center md:text-left">
-            <h2 className="text-4xl sm:text-6xl font-extrabold mb-6">
-              Train Hard.{" "}
-              <span className="text-green-500">Stay Strong.</span>
-            </h2>
-
-            <p className="text-gray-300 mb-8">
-              Personal training, strength programs, and fitness coaching
-              built for real results.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#contact"
-                className="bg-green-600 py-4 rounded-full font-semibold text-center hover:scale-105 transition"
-              >
-                Get Started
-              </a>
-
-              <a
-                href="#programs"
-                className="bg-gray-900 py-4 rounded-full font-semibold text-center hover:scale-105 transition"
-              >
-                View Programs
-              </a>
-            </div>
-          </div>
-
-          <img
-            src="https://images.unsplash.com/photo-1599058917212-d750089bc07e"
-            alt="Fitness"
-            className="rounded-3xl h-[420px] w-full object-cover"
-          />
-        </div>
+      <section className="px-4 py-20 text-center">
+        <h2 className="text-4xl font-extrabold mb-4">
+          Train Hard. <span className="text-green-500">Stay Strong.</span>
+        </h2>
+        <p className="text-gray-400 mb-8">
+          Real programs. Real results.
+        </p>
       </section>
 
       {/* PROGRAMS */}
-      <section id="programs" className="px-4 sm:px-8 py-20">
+      <section id="programs" className="px-4 py-20">
         <h3 className="text-3xl font-bold text-center mb-12">
           What We Offer
         </h3>
 
-        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
-          {[
-            {
-              title: "Personal Training",
-              text: "One-on-one coaching focused on strength and discipline.",
-              img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
-            },
-            {
-              title: "Online Coaching",
-              text: "Train anywhere with structured programs and accountability.",
-              img: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1",
-            },
-            {
-              title: "Athlete Conditioning",
-              text: "Performance-based training for athletes.",
-              img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
-            },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500 transition"
-            >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="h-48 w-full object-cover"
-              />
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* PERSONAL */}
+          <div className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-800">
+            <img
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
+              className="h-48 w-full object-cover"
+            />
+            <div className="p-6">
+              <h4 className="text-xl font-semibold mb-2">
+                Personal Training
+              </h4>
+              <p className="text-gray-400 mb-6">
+                One-on-one strength & discipline coaching.
+              </p>
+              <Link
+                to="/personal-training"
+                className="block text-center bg-green-600 py-3 rounded-full font-semibold"
+              >
+                View Program
+              </Link>
+            </div>
+          </div>
 
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">
-                  {item.title}
-                </h4>
+          {/* ONLINE */}
+          <div className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-800">
+            <img
+              src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
+              className="h-48 w-full object-cover"
+            />
+            <div className="p-6">
+              <h4 className="text-xl font-semibold mb-2">
+                Online Coaching
+              </h4>
+              <p className="text-gray-400 mb-6">
+                Train anywhere with structured plans.
+              </p>
+              <Link
+                to="/online-coaching"
+                className="block text-center bg-green-600 py-3 rounded-full font-semibold"
+              >
+                View Program
+              </Link>
+            </div>
+          </div>
 
-                <p className="text-gray-400 text-sm mb-6">
-                  {item.text}
-                </p>
+          {/* ATHLETE */}
+          <div className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-800">
+            <img
+              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
+              className="h-48 w-full object-cover"
+            />
+            <div className="p-6">
+              <h4 className="text-xl font-semibold mb-2">
+                Athlete Conditioning
+              </h4>
+              <p className="text-gray-400 mb-6">
+                Performance-focused training.
+              </p>
+              <Link
+                to="/athlete-conditioning"
+                className="block text-center bg-green-600 py-3 rounded-full font-semibold"
+              >
+                View Program
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div className="flex gap-3">
-                  <a
-                    href="#contact"
-                    className="
+      <footer className="text-center text-gray-500 text-sm py-6">
+        © 2025 Voltage Fitness
+      </footer>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/personal-training" element={<PersonalTraining />} />
+        <Route path="/online-coaching" element={<OnlineCoaching />} />
+        <Route path="/athlete-conditioning" element={<AthleteConditioning />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
