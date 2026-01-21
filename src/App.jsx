@@ -1,5 +1,6 @@
 import BookSession from "./pages/BookSession";
 import BookSession from "./pages/BookSession";
+import BookSession from "./pages/BookSession";
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
@@ -142,6 +143,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/book-session" element={<BookSession />} />
         <Route path="/book-session" element={<BookSession />} />
         <Route path="/book-session" element={<BookSession />} />
         <Route path="/" element={<Home />} />
