@@ -46,11 +46,13 @@ export default function PersonalTraining() {
           </a>
 
           <a
-            href="#contact"
-            className="flex-1 text-center border border-green-500 py-4 rounded-xl font-bold hover:bg-green-500 hover:text-black transition"
-          >
-            Book a Session
-          </a>
+  href="https://calendly.com/itikup/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex-1 text-center border border-green-500 py-4 rounded-xl font-bold hover:bg-green-500 hover:text-black transition"
+>
+  Book a Session
+</a>
         </div>
       </section>
     </div>
