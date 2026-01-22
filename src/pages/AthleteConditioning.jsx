@@ -4,51 +4,89 @@ export default function AthleteConditioning() {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* HERO */}
-      <section className="relative h-[70vh] flex items-end">
+      <section className="relative min-h-[80vh] flex items-end">
         <img
-          src="https://images.unsplash.com/photo-1517960413843-0aee8e2d471c"
+          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
           alt="Athlete Conditioning"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="relative z-10 p-6 pb-12 max-w-xl">
-          <h1 className="text-4xl font-extrabold mb-4">
+
+        <div className="absolute inset-0 bg-black/60" />
+
+        <div className="relative z-10 p-6 pb-14 max-w-xl">
+          <span className="inline-block mb-4 px-4 py-1 text-sm rounded-full bg-green-500 text-black font-semibold">
+            Performance Training
+          </span>
+
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">
             Athlete Conditioning
           </h1>
-          <p className="text-gray-200">
-            Performance-focused training built for speed,
-            power, endurance, and competitive athletes.
+
+          <p className="text-gray-200 text-lg">
+            High-performance conditioning built for fighters,
+            athletes, and competitors.
           </p>
         </div>
       </section>
 
       {/* CONTENT */}
-      <section className="px-6 py-16 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6 text-green-500">
-          What You Get
-        </h2>
+      <section className="px-6 py-20 max-w-5xl mx-auto">
+        <div className="grid gap-16 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+              Who This Is For
+            </h2>
 
-        <ul className="space-y-4 text-gray-300">
-          <li>✔ Strength & explosive power training</li>
-          <li>✔ Speed, agility & conditioning work</li>
-          <li>✔ Sport-specific programming</li>
-          <li>✔ Elite mindset & discipline development</li>
-        </ul>
+            <ul className="space-y-4 text-gray-300 text-lg">
+              <li>✔ Combat sport athletes</li>
+              <li>✔ Field & court sport athletes</li>
+              <li>✔ Competitive amateurs & pros</li>
+              <li>✔ Discipline-driven individuals</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-green-500">
+              What You Get
+            </h2>
+
+            <ul className="space-y-4 text-gray-300 text-lg">
+              <li>✔ Strength & power development</li>
+              <li>✔ Speed, agility & endurance</li>
+              <li>✔ Injury prevention & recovery</li>
+              <li>✔ Competition-ready conditioning</li>
+            </ul>
+          </div>
+        </div>
 
         {/* CTA */}
-        <div className="mt-12 flex flex-col sm:flex-row gap-4">
-          <a
-            href="https://wa.me/2349131101149"
-            className="flex-1 text-center bg-green-500 text-black py-4 rounded-xl font-bold hover:scale-105 transition"
-          >
-            Chat on WhatsApp
-          </a>
+        <div className="mt-20 bg-gray-950 border border-gray-800 rounded-2xl p-8 sm:p-12 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+            Train Like an Athlete
+          </h3>
 
-          <a
-            href="#contact"
-            className="flex-1 text-center border border-green-500 py-4 rounded-xl font-bold hover:bg-green-500 hover:text-black transition"
-          >
-            Train as an Athlete
-          </a>
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            Serious training for serious performance.
+            Build strength, speed, and resilience.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+            <a
+              href="https://wa.me/2349131101149"
+              className="flex-1 bg-green-500 text-black py-4 rounded-xl font-bold text-lg hover:scale-105 transition"
+            >
+              Chat on WhatsApp
+            </a>
+
+            <a
+              href="https://calendly.com/itikup/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 border border-green-500 py-4 rounded-xl font-bold text-lg hover:bg-green-500 hover:text-black transition"
+            >
+              Book a Session
+            </a>
+          </div>
         </div>
       </section>
     </div>
