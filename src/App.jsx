@@ -46,13 +46,61 @@ function Home() {
 
       {/* HERO */}
       <section className="px-4 py-20 text-center">
-        <h2 className="text-4xl font-extrabold mb-4">
-          Train Hard. <span className="text-green-500">Stay Strong.</span>
-        </h2>
+       <h2 className="text-4xl font-extrabold mb-4">
+  Built for <span className="text-green-500">Discipline.</span> Designed for Results.
+</h2>
+
         <p className="text-gray-400 mb-8">
           Real programs. Real results.
         </p>
       </section>
+      {/* ABOUT / CREATOR */}
+<section className="px-6 py-20 max-w-6xl mx-auto">
+  <div className="grid gap-12 md:grid-cols-2 items-center">
+    
+    {/* TEXT */}
+    <div>
+      <h3 className="text-3xl font-extrabold mb-4">
+        Meet Your Coach
+      </h3>
+
+      <p className="text-gray-300 mb-4">
+        Performance athlete & discipline-focused trainer for serious clients.
+        I work with individuals who are tired of shortcuts and ready to build
+        strength, structure, and consistency.
+      </p>
+
+      <p className="text-gray-400 mb-6">
+        My coaching blends athletic conditioning, mindset training, and
+        sustainable fitness systems — designed for real life, not hype.
+      </p>
+
+      <div className="flex flex-wrap gap-3">
+        <span className="px-4 py-2 bg-gray-900 rounded-full text-sm">
+          Performance Training
+        </span>
+        <span className="px-4 py-2 bg-gray-900 rounded-full text-sm">
+          Discipline Systems
+        </span>
+        <span className="px-4 py-2 bg-gray-900 rounded-full text-sm">
+          Athlete Mindset
+        </span>
+      </div>
+    </div>
+
+    {/* IMAGE */}
+    <div className="relative">
+      <img
+        src="https://images.unsplash.com/photo-1599058917212-d750089bc07d"
+        alt="Coach"
+        className="rounded-3xl object-cover w-full h-[420px]"
+      />
+    </div>
+
+  </div>
+</section>
+
+
 
       {/* PROGRAMS */}
       <section id="programs" className="px-4 py-20">
