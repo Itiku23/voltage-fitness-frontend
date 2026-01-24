@@ -94,8 +94,7 @@ function Home() {
       <img
   src={coachImage}
   alt="Coach"
-  className="rounded-3xl object-cover w-full h-[420px] contrast-110"
-
+  className="rounded-3xl object-cover w-full h-[420px]"
 />
 
     </div>
