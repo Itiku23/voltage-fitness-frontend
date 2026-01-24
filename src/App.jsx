@@ -1,3 +1,4 @@
+import coachImage from "./assets/coach.jpg";
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
@@ -91,10 +92,12 @@ function Home() {
     {/* IMAGE */}
     <div className="relative">
       <img
-        src="https://images.unsplash.com/photo-1599058917212-d750089bc07d"
-        alt="Coach"
-        className="rounded-3xl object-cover w-full h-[420px]"
-      />
+  src={coachImage}
+  alt="Coach"
+  className="rounded-3xl object-cover w-full h-[420px] contrast-110"
+
+/>
+
     </div>
 
   </div>
