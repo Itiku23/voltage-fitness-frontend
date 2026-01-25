@@ -1,4 +1,3 @@
-import coachImage from "./assets/coach.jpg";
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
@@ -17,7 +16,6 @@ function Home() {
             Voltage Fitness
           </h1>
 
-          {/* INTERNAL ROUTE — NO POPUP */}
           <Link
             to="/book-session"
             className="bg-red-600 px-4 py-2 rounded-full text-sm"
@@ -38,8 +36,8 @@ function Home() {
             </a>
           </li>
           <li>
-            <a href="#contact" className="px-4 py-2 bg-gray-900 rounded-full">
-              Contact
+            <a href="#about" className="px-4 py-2 bg-gray-900 rounded-full">
+              About
             </a>
           </li>
         </ul>
@@ -47,62 +45,13 @@ function Home() {
 
       {/* HERO */}
       <section className="px-4 py-20 text-center">
-       <h2 className="text-4xl font-extrabold mb-4">
-  Built for <span className="text-green-500">Discipline.</span> Designed for Results.
-</h2>
-
+        <h2 className="text-4xl font-extrabold mb-4">
+          Train Hard. <span className="text-green-500">Stay Strong.</span>
+        </h2>
         <p className="text-gray-400 mb-8">
-          Real programs. Real results.
+          Performance athlete & discipline-focused trainer for serious clients.
         </p>
       </section>
-      {/* ABOUT / CREATOR */}
-<section className="px-6 py-20 max-w-6xl mx-auto">
-  <div className="grid gap-12 md:grid-cols-2 items-center">
-    
-    {/* TEXT */}
-    <div>
-      <h3 className="text-3xl font-extrabold mb-4">
-        Meet Your Coach
-      </h3>
-
-      <p className="text-gray-300 mb-4">
-        Performance athlete & discipline-focused trainer for serious clients.
-        I work with individuals who are tired of shortcuts and ready to build
-        strength, structure, and consistency.
-      </p>
-
-      <p className="text-gray-400 mb-6">
-        My coaching blends athletic conditioning, mindset training, and
-        sustainable fitness systems — designed for real life, not hype.
-      </p>
-
-      <div className="flex flex-wrap gap-3">
-        <span className="px-4 py-2 bg-gray-900 rounded-full text-sm">
-          Performance Training
-        </span>
-        <span className="px-4 py-2 bg-gray-900 rounded-full text-sm">
-          Discipline Systems
-        </span>
-        <span className="px-4 py-2 bg-gray-900 rounded-full text-sm">
-          Athlete Mindset
-        </span>
-      </div>
-    </div>
-
-    {/* IMAGE */}
-    <div className="relative">
-      <img
-  src={coachImage}
-  alt="Coach"
-  className="rounded-3xl object-cover w-full h-[420px]"
-/>
-
-    </div>
-
-  </div>
-</section>
-
-
 
       {/* PROGRAMS */}
       <section id="programs" className="px-4 py-20">
@@ -115,6 +64,7 @@ function Home() {
           <div className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-800">
             <img
               src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
+              alt="Personal Training"
               className="h-48 w-full object-cover"
             />
             <div className="p-6">
@@ -137,6 +87,7 @@ function Home() {
           <div className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-800">
             <img
               src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
+              alt="Online Coaching"
               className="h-48 w-full object-cover"
             />
             <div className="p-6">
@@ -159,6 +110,7 @@ function Home() {
           <div className="bg-gray-950 rounded-2xl overflow-hidden border border-gray-800">
             <img
               src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
+              alt="Athlete Conditioning"
               className="h-48 w-full object-cover"
             />
             <div className="p-6">
@@ -177,6 +129,30 @@ function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ABOUT */}
+      <section
+        id="about"
+        className="px-6 py-20 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <h3 className="text-3xl font-bold mb-4">
+            About the Coach
+          </h3>
+          <p className="text-gray-400 leading-relaxed">
+            Performance athlete & discipline-focused trainer for serious clients.
+            Fitness creator & brand partner. I help individuals build strength,
+            structure, and elite-level discipline that carries over into life.
+          </p>
+        </div>
+
+        {/* ✅ PUBLIC IMAGE — NO IMPORT */}
+        <img
+          src="/coach.jpg"
+          alt="Coach"
+          className="rounded-3xl object-cover w-full h-[420px]"
+        />
       </section>
 
       <footer className="text-center text-gray-500 text-sm py-6">
