@@ -1,3 +1,5 @@
+import coachImg from "./assets/coach.jpg";
+<img src={coachImg} />
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 

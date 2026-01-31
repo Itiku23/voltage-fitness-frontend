@@ -17,8 +17,8 @@ export default function OnlineCoaching() {
           </h1>
 
           <p className="text-gray-200">
-            Structured remote coaching for disciplined individuals
-            who want real results — anywhere in the world.
+            Train anywhere with structured programs, accountability,
+            and expert guidance — no gym required.
           </p>
         </div>
       </section>
@@ -26,14 +26,14 @@ export default function OnlineCoaching() {
       {/* CONTENT */}
       <section className="px-6 py-16 max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold mb-6 text-green-500">
-          How Online Coaching Works
+          What’s Included
         </h2>
 
         <ul className="space-y-4 text-gray-300">
-          <li>✔ Personalized training programs</li>
-          <li>✔ Weekly progress tracking & adjustments</li>
-          <li>✔ Nutrition & recovery guidance</li>
-          <li>✔ Discipline & accountability system</li>
+          <li>✔ Personalized workout plans</li>
+          <li>✔ Weekly progress check-ins</li>
+          <li>✔ Nutrition & lifestyle guidance</li>
+          <li>✔ Flexible training anywhere</li>
         </ul>
 
         {/* CTA */}
@@ -42,7 +42,7 @@ export default function OnlineCoaching() {
             href="https://wa.me/2349131101149"
             className="flex-1 text-center bg-green-500 text-black py-4 rounded-xl font-bold hover:scale-105 transition"
           >
-            Start via WhatsApp
+            Chat on WhatsApp
           </a>
 
           <a
@@ -51,7 +51,7 @@ export default function OnlineCoaching() {
             rel="noopener noreferrer"
             className="flex-1 text-center border border-green-500 py-4 rounded-xl font-bold hover:bg-green-500 hover:text-black transition"
           >
-            Strategy Call
+            Book a Session
           </a>
         </div>
       </section>
