@@ -1,5 +1,3 @@
-import coachImg from "./assets/coach.jpg";
-<img src={coachImg} />
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
@@ -149,7 +147,7 @@ function Home() {
           </p>
         </div>
 
-        {/* ✅ PUBLIC IMAGE — NO IMPORT */}
+        {/* PUBLIC IMAGE */}
         <img
           src="/coach.jpg"
           alt="Coach"
