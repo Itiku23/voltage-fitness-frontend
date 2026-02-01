@@ -151,7 +151,7 @@ function Home() {
     </h3>
 
     <p className="text-gray-400 leading-relaxed mb-6">
-      I’m a performance athlete and discipline-focused trainer working with
+      I’m an elite athlete and discipline-focused trainer working with
       individuals who take their training seriously. My approach is structured,
       intentional, and built for long-term results — not shortcuts.
     </p>
