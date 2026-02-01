@@ -67,7 +67,7 @@ function Home() {
       <section className="px-6 py-24 text-center max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
           High-Performance Training for
-          <span className="text-green-500"> Disciplined Athletes</span>
+          <span className="text-green-500"> Disciplined Individuals</span>
         </h2>
 
         <p className="text-gray-400 mb-10 text-lg">
