@@ -30,41 +30,23 @@ function Home() {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* NAVBAR */}
-      <nav className="border-b border-gray-800 px-4 py-4">
-        <div className="flex justify-between items-center">
+      <nav className="border-b border-gray-800 px-6 py-4">
+        <div className="flex justify-between items-center max-w-6xl mx-auto">
           <h1 className="text-lg font-bold text-green-500">
             Voltage Fitness
           </h1>
 
           <Link
             to="/book-session"
-            className="bg-green-600 px-4 py-2 rounded-full text-sm font-semibold"
+            className="bg-green-600 px-5 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
           >
             Book Session
           </Link>
         </div>
-
-        <ul className="flex justify-center gap-3 mt-4 text-sm">
-          <li>
-            <Link to="/" className="px-4 py-2 bg-gray-900 rounded-full">
-              Home
-            </Link>
-          </li>
-          <li>
-            <a href="#programs" className="px-4 py-2 bg-gray-900 rounded-full">
-              Programs
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="px-4 py-2 bg-gray-900 rounded-full">
-              About
-            </a>
-          </li>
-        </ul>
       </nav>
 
       {/* HERO */}
-      <section className="px-6 py-24 text-center max-w-3xl mx-auto">
+      <section className="px-6 py-28 text-center max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
           High-Performance Training for
           <span className="text-green-500"> Disciplined Individuals</span>
@@ -73,7 +55,7 @@ function Home() {
         <p className="text-gray-400 mb-10 text-lg">
           Performance athlete & discipline-focused trainer helping serious
           individuals build strength, structure, and mental toughness —
-          in and out of sport.
+          in sport and in life.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,21 +67,21 @@ function Home() {
           </Link>
 
           <Link
-            to="/athlete-conditioning"
+            to="/personal-training"
             className="border border-green-600 px-8 py-4 rounded-xl font-bold hover:bg-green-600 hover:text-black transition"
           >
-            Athlete Conditioning
+            Personal Training
           </Link>
         </div>
       </section>
 
       {/* WHO THIS IS FOR */}
-      <section className="px-6 py-16 bg-gray-950">
-        <h3 className="text-3xl font-bold text-center mb-10">
+      <section className="px-6 py-20 bg-gray-950">
+        <h3 className="text-3xl font-bold text-center mb-12">
           Who This Is For
         </h3>
 
-        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-6 text-gray-300">
+        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-6 text-gray-300 text-lg">
           <p>✔ Combat sport athletes (Taekwondo, Boxing, MMA)</p>
           <p>✔ Field & court athletes</p>
           <p>✔ Competitive individuals preparing for events</p>
@@ -108,87 +90,53 @@ function Home() {
       </section>
 
       {/* PROGRAMS */}
-      <section id="programs" className="px-6 py-20">
+      <section id="programs" className="px-6 py-24">
         <h3 className="text-3xl font-bold text-center mb-14">
           Training Programs
         </h3>
 
         <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
-          {/* PERSONAL */}
           <ProgramCard
             title="Personal Training"
-            desc="One-on-one coaching built around strength, discipline, and results."
+            desc="One-on-one coaching focused on strength, discipline, and real results."
             img="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
             link="/personal-training"
           />
 
-          {/* ONLINE */}
           <ProgramCard
             title="Online Coaching"
-            desc="Structured remote training with accountability and support."
+            desc="Structured remote coaching with accountability and progression."
             img="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
             link="/online-coaching"
           />
 
-          {/* ATHLETE */}
           <ProgramCard
             title="Athlete Conditioning"
-            desc="High-performance conditioning for competitive athletes."
+            desc="High-performance conditioning for serious competitive athletes."
             img="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
             link="/athlete-conditioning"
           />
         </div>
       </section>
-      {/* ABOUT */}
-<section
-  id="about"
-  className="px-6 py-24 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
->
-  {/* TEXT */}
-  <div>
-    <h3 className="text-4xl font-extrabold mb-6">
-      Built on Discipline. Driven by Performance.
-    </h3>
 
-    <p className="text-gray-400 leading-relaxed mb-6">
-      I’m an elite athlete and discipline-focused trainer working with
-      individuals who take their training seriously. My approach is structured,
-      intentional, and built for long-term results — not shortcuts.
-    </p>
+      {/* FINAL CTA */}
+      <section className="px-6 py-24 text-center bg-gray-950">
+        <h3 className="text-3xl font-bold mb-6">
+          Ready to Train With Structure & Purpose?
+        </h3>
 
-    <p className="text-gray-400 leading-relaxed mb-6">
-      Whether you’re a competitive athlete or preparing for a demanding goal,
-      training isn’t just about fitness. It’s about discipline, resilience,
-      and consistency.
-    </p>
+        <p className="text-gray-400 mb-10 max-w-xl mx-auto">
+          Stop guessing. Start training with a clear plan, accountability,
+          and discipline that carries over into life.
+        </p>
 
-    <h4 className="text-xl font-semibold text-green-500 mb-4">
-      Training Philosophy
-    </h4>
-
-    <ul className="space-y-3 text-gray-300">
-      <li>✔ Structure over chaos</li>
-      <li>✔ Performance before aesthetics</li>
-      <li>✔ Mental toughness through physical work</li>
-      <li>✔ Discipline that transfers into life</li>
-    </ul>
-
-    <div className="mt-10">
-      <Link
-        to="/book-session"
-        className="inline-block bg-green-600 px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
-      >
-        Book a Consultation
-      </Link>
-    </div>
-  </div>
-
-  {/* IMAGE PLACEHOLDER — SAFE FOR NOW */}
-  <div className="w-full h-[420px] bg-gray-900 rounded-3xl flex items-center justify-center text-gray-500">
-    Coach Image
-  </div>
-</section>
-
+        <Link
+          to="/book-session"
+          className="inline-block bg-green-600 px-10 py-4 rounded-xl font-bold hover:scale-105 transition"
+        >
+          Book Your Session
+        </Link>
+      </section>
 
       <footer className="text-center text-gray-500 text-sm py-6">
         © 2025 Voltage Fitness
@@ -196,6 +144,7 @@ function Home() {
     </div>
   );
 }
+
 
 
 export default function App() {
