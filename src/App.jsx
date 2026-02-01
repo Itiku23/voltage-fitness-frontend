@@ -139,6 +139,56 @@ function Home() {
           />
         </div>
       </section>
+      {/* ABOUT */}
+<section
+  id="about"
+  className="px-6 py-24 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+>
+  {/* TEXT */}
+  <div>
+    <h3 className="text-4xl font-extrabold mb-6">
+      Built on Discipline. Driven by Performance.
+    </h3>
+
+    <p className="text-gray-400 leading-relaxed mb-6">
+      I’m a performance athlete and discipline-focused trainer working with
+      individuals who take their training seriously. My approach is structured,
+      intentional, and built for long-term results — not shortcuts.
+    </p>
+
+    <p className="text-gray-400 leading-relaxed mb-6">
+      Whether you’re a competitive athlete or preparing for a demanding goal,
+      training isn’t just about fitness. It’s about discipline, resilience,
+      and consistency.
+    </p>
+
+    <h4 className="text-xl font-semibold text-green-500 mb-4">
+      Training Philosophy
+    </h4>
+
+    <ul className="space-y-3 text-gray-300">
+      <li>✔ Structure over chaos</li>
+      <li>✔ Performance before aesthetics</li>
+      <li>✔ Mental toughness through physical work</li>
+      <li>✔ Discipline that transfers into life</li>
+    </ul>
+
+    <div className="mt-10">
+      <Link
+        to="/book-session"
+        className="inline-block bg-green-600 px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
+      >
+        Book a Consultation
+      </Link>
+    </div>
+  </div>
+
+  {/* IMAGE PLACEHOLDER — SAFE FOR NOW */}
+  <div className="w-full h-[420px] bg-gray-900 rounded-3xl flex items-center justify-center text-gray-500">
+    Coach Image
+  </div>
+</section>
+
 
       <footer className="text-center text-gray-500 text-sm py-6">
         © 2025 Voltage Fitness
