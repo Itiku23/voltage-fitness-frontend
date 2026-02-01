@@ -17,8 +17,8 @@ export default function OnlineCoaching() {
           </h1>
 
           <p className="text-gray-200">
-            Structured remote training designed to keep you consistent,
-            accountable, and progressing — wherever you train.
+            High-performance online coaching built for individuals who want
+            structure, discipline, and real progress — without guessing.
           </p>
         </div>
       </section>
@@ -39,6 +39,8 @@ export default function OnlineCoaching() {
           </ul>
         </div>
 
+        <hr className="border-gray-800 my-14" />
+
         {/* WHO IT'S FOR */}
         <div className="mb-14">
           <h2 className="text-2xl font-bold mb-6 text-green-500">
@@ -53,6 +55,8 @@ export default function OnlineCoaching() {
           </ul>
         </div>
 
+        <hr className="border-gray-800 my-14" />
+
         {/* HOW IT WORKS */}
         <div className="mb-14">
           <h2 className="text-2xl font-bold mb-6 text-green-500">
@@ -66,6 +70,10 @@ export default function OnlineCoaching() {
             <li>Ongoing support & program updates</li>
           </ol>
         </div>
+
+        <p className="text-center text-gray-400 mb-8 text-lg">
+          This is for people ready to commit — not dabble.
+        </p>
 
         {/* CTA */}
         <div className="mt-12 flex flex-col sm:flex-row gap-4">
