@@ -17,16 +17,16 @@ export default function AthleteConditioning() {
           </h1>
 
           <p className="text-gray-200 text-lg">
-            High-performance conditioning built for athletes who demand
-            speed, power, durability, and mental toughness.
+            High-performance conditioning for competitive athletes who demand
+            speed, power, resilience, and mental toughness.
           </p>
         </div>
       </section>
 
       {/* CONTENT */}
-      <section className="px-6 py-16 max-w-5xl mx-auto">
+      <section className="px-6 py-20 max-w-5xl mx-auto">
         {/* WHO THIS IS FOR */}
-        <div className="mb-14">
+        <div className="mb-16">
           <h2 className="text-2xl font-bold mb-6 text-green-500">
             Who This Is For
           </h2>
@@ -40,7 +40,7 @@ export default function AthleteConditioning() {
         </div>
 
         {/* TRAINING FOCUS */}
-        <div className="mb-14">
+        <div className="mb-16">
           <h2 className="text-2xl font-bold mb-6 text-green-500">
             Training Focus
           </h2>
@@ -53,17 +53,17 @@ export default function AthleteConditioning() {
           </ul>
         </div>
 
-        {/* HOW TRAINING WORKS */}
-        <div className="mb-14">
+        {/* HOW IT WORKS */}
+        <div className="mb-16">
           <h2 className="text-2xl font-bold mb-6 text-green-500">
-            How Training Works
+            How It Works
           </h2>
 
           <ol className="space-y-4 text-gray-300 list-decimal list-inside">
-            <li>Athlete assessment & performance goals</li>
+            <li>Performance assessment & goal setting</li>
             <li>Sport-specific conditioning plan</li>
             <li>Progressive overload & monitoring</li>
-            <li>Ongoing adjustments for peak performance</li>
+            <li>Consistent feedback & program adjustments</li>
           </ol>
         </div>
 
@@ -73,7 +73,7 @@ export default function AthleteConditioning() {
             href="https://wa.me/2349131101149"
             className="flex-1 text-center bg-green-500 text-black py-4 rounded-xl font-bold hover:scale-105 transition"
           >
-            Start Athlete Conditioning
+            Chat on WhatsApp
           </a>
 
           <a
@@ -82,7 +82,7 @@ export default function AthleteConditioning() {
             rel="noopener noreferrer"
             className="flex-1 text-center border border-green-500 py-4 rounded-xl font-bold hover:bg-green-500 hover:text-black transition"
           >
-            Book Assessment Call
+            Book Assessment
           </a>
         </div>
       </section>
