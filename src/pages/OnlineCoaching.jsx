@@ -6,7 +6,7 @@ export default function OnlineCoaching() {
       {/* HERO */}
       <section className="relative h-[70vh] flex items-end">
         <img
-          src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"
+          src="https://images.unsplash.com/photo-1599058917212-d750089bc07b"
           alt="Online Coaching"
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
@@ -17,24 +17,55 @@ export default function OnlineCoaching() {
           </h1>
 
           <p className="text-gray-200">
-            Train anywhere with structured programs, accountability,
-            and expert guidance — no gym required.
+            Structured remote training designed to keep you consistent,
+            accountable, and progressing — wherever you train.
           </p>
         </div>
       </section>
 
       {/* CONTENT */}
-      <section className="px-6 py-16 max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6 text-green-500">
-          What’s Included
-        </h2>
+      <section className="px-6 py-16 max-w-5xl mx-auto">
+        {/* WHAT YOU GET */}
+        <div className="mb-14">
+          <h2 className="text-2xl font-bold mb-6 text-green-500">
+            What You Get
+          </h2>
 
-        <ul className="space-y-4 text-gray-300">
-          <li>✔ Personalized workout plans</li>
-          <li>✔ Weekly progress check-ins</li>
-          <li>✔ Nutrition & lifestyle guidance</li>
-          <li>✔ Flexible training anywhere</li>
-        </ul>
+          <ul className="grid sm:grid-cols-2 gap-4 text-gray-300">
+            <li>✔ Personalized training programs</li>
+            <li>✔ Weekly progress check-ins</li>
+            <li>✔ Technique feedback & adjustments</li>
+            <li>✔ Nutrition & lifestyle guidance</li>
+          </ul>
+        </div>
+
+        {/* WHO IT'S FOR */}
+        <div className="mb-14">
+          <h2 className="text-2xl font-bold mb-6 text-green-500">
+            Who This Is For
+          </h2>
+
+          <ul className="grid sm:grid-cols-2 gap-4 text-gray-300">
+            <li>✔ Busy individuals who need structure</li>
+            <li>✔ Athletes training without a coach nearby</li>
+            <li>✔ People who want discipline & accountability</li>
+            <li>✔ Anyone serious about long-term progress</li>
+          </ul>
+        </div>
+
+        {/* HOW IT WORKS */}
+        <div className="mb-14">
+          <h2 className="text-2xl font-bold mb-6 text-green-500">
+            How It Works
+          </h2>
+
+          <ol className="space-y-4 text-gray-300 list-decimal list-inside">
+            <li>Initial consultation & goal setting</li>
+            <li>Custom program built around your schedule</li>
+            <li>Weekly check-ins & progress tracking</li>
+            <li>Ongoing support & program updates</li>
+          </ol>
+        </div>
 
         {/* CTA */}
         <div className="mt-12 flex flex-col sm:flex-row gap-4">
