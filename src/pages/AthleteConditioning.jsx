@@ -11,13 +11,13 @@ export default function AthleteConditioning() {
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
 
-        <div className="relative z-10 p-6 pb-12 max-w-xl">
-          <h1 className="text-4xl font-extrabold mb-4">
+        <div className="relative z-10 p-6 pb-12 max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             Athlete Conditioning
           </h1>
 
-          <p className="text-gray-200">
-            High-performance training for athletes who demand
+          <p className="text-gray-200 text-lg">
+            High-performance conditioning built for athletes who demand
             speed, power, durability, and mental toughness.
           </p>
         </div>
@@ -53,13 +53,27 @@ export default function AthleteConditioning() {
           </ul>
         </div>
 
+        {/* HOW TRAINING WORKS */}
+        <div className="mb-14">
+          <h2 className="text-2xl font-bold mb-6 text-green-500">
+            How Training Works
+          </h2>
+
+          <ol className="space-y-4 text-gray-300 list-decimal list-inside">
+            <li>Athlete assessment & performance goals</li>
+            <li>Sport-specific conditioning plan</li>
+            <li>Progressive overload & monitoring</li>
+            <li>Ongoing adjustments for peak performance</li>
+          </ol>
+        </div>
+
         {/* CTA */}
         <div className="mt-12 flex flex-col sm:flex-row gap-4">
           <a
             href="https://wa.me/2349131101149"
             className="flex-1 text-center bg-green-500 text-black py-4 rounded-xl font-bold hover:scale-105 transition"
           >
-            Chat on WhatsApp
+            Start Athlete Conditioning
           </a>
 
           <a
@@ -68,7 +82,7 @@ export default function AthleteConditioning() {
             rel="noopener noreferrer"
             className="flex-1 text-center border border-green-500 py-4 rounded-xl font-bold hover:bg-green-500 hover:text-black transition"
           >
-            Book a Session
+            Book Assessment Call
           </a>
         </div>
       </section>
