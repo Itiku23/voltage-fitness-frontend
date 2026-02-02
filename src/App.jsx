@@ -13,12 +13,12 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         {/* GLOBAL LAYOUT */}
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/book-session" element={<BookSession />} />
-          <Route path="/personal-training" element={<PersonalTraining />} />
-          <Route path="/online-coaching" element={<OnlineCoaching />} />
-          <Route path="/athlete-conditioning" element={<AthleteConditioning />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="book-session" element={<BookSession />} />
+          <Route path="personal-training" element={<PersonalTraining />} />
+          <Route path="online-coaching" element={<OnlineCoaching />} />
+          <Route path="athlete-conditioning" element={<AthleteConditioning />} />
         </Route>
       </Routes>
     </BrowserRouter>
