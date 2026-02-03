@@ -7,11 +7,11 @@ import PersonalTraining from "./pages/PersonalTraining";
 import OnlineCoaching from "./pages/OnlineCoaching";
 import AthleteConditioning from "./pages/AthleteConditioning";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* GLOBAL LAYOUT */}
+        {/* LAYOUT ROUTE */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="book-session" element={<BookSession />} />
@@ -23,3 +23,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App;
