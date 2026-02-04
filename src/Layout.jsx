@@ -15,6 +15,7 @@ export default function Layout() {
           <ul className="hidden md:flex gap-6 text-sm font-medium">
             <li>
               <Link to="/" className="hover:text-green-500">
+
                 Home
               </Link>
             </li>
@@ -38,7 +39,8 @@ export default function Layout() {
           {/* CTA */}
           <Link
             to="/book-session"
-            className="bg-green-600 px-5 py-2 rounded-full text-sm font-semibold hover:scale-105 transition"
+            className="bg-green-600 px-5 py-2 rounded-full text-sm font-semibold pop-lg
+"
           >
             Book Session
           </Link>

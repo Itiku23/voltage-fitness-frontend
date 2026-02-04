@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen fade-in">
       {/* HERO */}
       <section className="px-6 py-24 text-center max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
@@ -63,12 +63,12 @@ export default function Home() {
 
 function ProgramCard({ title, desc, link }) {
   return (
-    <div className="bg-black border border-gray-800 rounded-2xl p-6 text-center">
+    <div className="bg-black border border-gray-800 rounded-2xl p-6 text-center pop lift">
       <h4 className="text-xl font-semibold mb-3">{title}</h4>
       <p className="text-gray-400 mb-6">{desc}</p>
       <Link
         to={link}
-        className="inline-block bg-green-600 px-6 py-3 rounded-full font-semibold"
+        className="inline-block bg-green-600 px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
       >
         View Program
       </Link>
