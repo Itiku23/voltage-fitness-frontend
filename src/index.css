@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 /* Fade-in animation */
-.fade-in {
-  animation: fadeIn 0.6s ease-out both;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -17,17 +13,16 @@
   }
 }
 
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
 /* Pop / lift hover animation */
 .pop {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pop:hover {
-  transform: scale(1.05);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
-
-/* Lift effect */
-.lift:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
