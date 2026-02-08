@@ -20,10 +20,10 @@ export default function Layout() {
               </Link>
             </li>
             <li>
-              <a href="#about" className="hover:text-green-500">
-                About
-              </a>
-            </li>
+  <Link to="/about" className="hover:text-green-500">
+    About
+  </Link>
+</li>
             <li>
               <a href="#programs" className="hover:text-green-500">
                 Programs
