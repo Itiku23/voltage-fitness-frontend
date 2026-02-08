@@ -1,3 +1,5 @@
+import About from "./pages/About";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 
@@ -14,6 +16,7 @@ function App() {
         {/* LAYOUT ROUTE */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+           <Route path="about" element={<About />} />
           <Route path="book-session" element={<BookSession />} />
           <Route path="personal-training" element={<PersonalTraining />} />
           <Route path="online-coaching" element={<OnlineCoaching />} />

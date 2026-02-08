@@ -1,3 +1,5 @@
+import AboutSection from "../components/AboutSection";
+
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -59,6 +61,8 @@ export default function Home() {
       </section>
     </div>
   );
+  <AboutSection />
+
 }
 
 function ProgramCard({ title, desc, link }) {
