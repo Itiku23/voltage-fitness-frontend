@@ -1,15 +1,16 @@
+import athleteImg from "../assets/athlete-conditioning.jpg";
 import React from "react";
 
 export default function AthleteConditioning() {
   return (
     <div className="bg-black text-white min-h-screen">
       {/* HERO */}
-      <section className="relative h-[70vh] flex items-end">
+      <div className="bg-black text-white min-h-screen animate-fade-in">
         <img
-          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
-          alt="Athlete Conditioning"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-        />
+  src={athleteImg}
+  alt="Athlete Conditioning"
+  className="absolute inset-0 w-full h-full object-cover opacity-50"
+/>
 
         <div className="relative z-10 p-6 pb-12 max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">

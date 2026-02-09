@@ -1,15 +1,16 @@
+import onlineImg from "../assets/online-coaching.jpg";
 import React from "react";
 
 export default function OnlineCoaching() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen animate-fade-in">
       {/* HERO */}
       <section className="relative h-[70vh] flex items-end">
         <img
-          src="https://images.unsplash.com/photo-1599058917212-d750089bc07b"
-          alt="Online Coaching"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-        />
+  src={onlineImg}
+  alt="Online Coaching"
+  className="absolute inset-0 w-full h-full object-cover opacity-50"
+/>
 
         <div className="relative z-10 p-6 pb-12 max-w-xl">
           <h1 className="text-4xl font-extrabold mb-4">

@@ -1,15 +1,16 @@
+import personalImg from "../assets/personal-training.jpg";
 import React from "react";
 
 export default function PersonalTraining() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen animate-fade-in">
       {/* HERO */}
       <section className="relative h-[70vh] flex items-end">
         <img
-          src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
-          alt="Personal Training"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-        />
+  src={personalImg}
+  alt="Personal Training"
+  className="absolute inset-0 w-full h-full object-cover opacity-50"
+/>
 
         <div className="relative z-10 p-6 pb-12 max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
