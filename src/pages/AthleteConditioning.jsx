@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AthleteConditioning() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen animate-fade-in">
       {/* HERO */}
       <div className="bg-black text-white min-h-screen animate-fade-in">
         <img
