@@ -1,16 +1,17 @@
-import athleteImg from "../assets/athlete-conditioning.jpg";
 import React from "react";
+import athleteImg from "../assets/athlete-conditioning.jpg";
 
 export default function AthleteConditioning() {
   return (
     <div className="bg-black text-white min-h-screen animate-fade-in">
+      
       {/* HERO */}
-      <div className="bg-black text-white min-h-screen animate-fade-in">
+      <section className="relative h-[70vh] flex items-end">
         <img
-  src={athleteImg}
-  alt="Athlete Conditioning"
-  className="absolute inset-0 w-full h-full object-cover opacity-50"
-/>
+          src={athleteImg}
+          alt="Athlete Conditioning"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
+        />
 
         <div className="relative z-10 p-6 pb-12 max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
@@ -26,6 +27,7 @@ export default function AthleteConditioning() {
 
       {/* CONTENT */}
       <section className="px-6 py-20 max-w-5xl mx-auto">
+        
         {/* WHO THIS IS FOR */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold mb-6 text-green-500">
@@ -87,6 +89,7 @@ export default function AthleteConditioning() {
           </a>
         </div>
       </section>
+
     </div>
   );
 }
