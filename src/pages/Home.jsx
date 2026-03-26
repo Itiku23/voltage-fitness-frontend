@@ -8,25 +8,22 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
 
-        {/* BACKGROUND IMAGE */}
         <img
           src="/hero-training.jpg"
           alt="High Performance Training"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* DARK OVERLAY */}
         <div className="absolute inset-0 bg-black/70"></div>
 
-        {/* CONTENT */}
         <Reveal>
           <div className="relative z-10 max-w-3xl">
-            <h2 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
               High-Performance Training for
               <span className="text-green-500"> Disciplined Individuals</span>
             </h2>
 
-            <p className="text-gray-300 text-lg md:text-xl mb-10">
+            <p className="text-gray-300 text-lg mb-10">
               Performance athlete & discipline-focused coach helping serious
               individuals build strength, structure, and mental toughness —
               in and out of sport.
@@ -49,7 +46,6 @@ export default function Home() {
             </div>
           </div>
         </Reveal>
-
       </section>
 
       {/* PROGRAMS */}
@@ -60,51 +56,65 @@ export default function Home() {
 
         <Reveal delay={0.2}>
           <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
-
             <ProgramCard
               title="Personal Training"
               desc="One-on-one coaching built around strength, discipline, and results."
               link="/personal-training"
             />
-
             <ProgramCard
               title="Online Coaching"
               desc="Structured remote training with accountability and support."
               link="/online-coaching"
             />
-
             <ProgramCard
               title="Athlete Conditioning"
               desc="High-performance conditioning for competitive athletes."
               link="/athlete-conditioning"
             />
-
           </div>
         </Reveal>
       </section>
 
-      {/* ABOUT PREVIEW */}
-      <section
-        id="about"
-        className="px-6 py-24 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
-      >
+      {/* TESTIMONIALS */}
+      <section className="px-6 py-24 bg-black">
+        <h3 className="text-3xl font-bold text-center mb-14">
+          Athlete Results & Client Feedback
+        </h3>
 
+        <Reveal delay={0.25}>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <TestimonialCard
+              quote="My speed and conditioning improved massively in 8 weeks. Training structure was elite."
+              name="Combat Athlete"
+            />
+            <TestimonialCard
+              quote="I stopped guessing in the gym. Every session had purpose and progression."
+              name="Field Sport Athlete"
+            />
+            <TestimonialCard
+              quote="Discipline and accountability changed everything — not just my fitness."
+              name="Online Coaching Client"
+            />
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ABOUT */}
+      <section className="px-6 py-24 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <Reveal delay={0.3}>
           <div>
             <h3 className="text-3xl font-bold mb-6">
               About the Coach
             </h3>
 
-            <p className="text-gray-400 leading-relaxed mb-8">
+            <p className="text-gray-400 mb-8">
               Performance athlete & discipline-focused trainer helping serious
               individuals build strength, structure, and elite-level discipline.
-              Training here is built on accountability, progression, and mental
-              resilience — not guesswork.
             </p>
 
             <Link
               to="/about"
-              className="inline-block bg-green-600 px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
+              className="bg-green-600 px-6 py-3 rounded-full font-semibold"
             >
               Learn More
             </Link>
@@ -116,15 +126,13 @@ export default function Home() {
           alt="Coach"
           className="rounded-3xl object-cover w-full h-[420px]"
         />
-
       </section>
 
     </div>
   );
 }
 
-/* ---------- CARD COMPONENT ---------- */
-
+/* PROGRAM CARD */
 function ProgramCard({ title, desc, link }) {
   return (
     <div className="bg-black border border-gray-800 rounded-2xl p-8 text-center hover:scale-105 transition">
@@ -137,6 +145,20 @@ function ProgramCard({ title, desc, link }) {
       >
         View Program
       </Link>
+    </div>
+  );
+}
+
+/* TESTIMONIAL CARD (FIXED POSITION) */
+function TestimonialCard({ quote, name }) {
+  return (
+    <div className="bg-gray-950 border border-gray-800 rounded-2xl p-8 hover:scale-105 transition">
+      <p className="text-gray-300 mb-6 italic">
+        “{quote}”
+      </p>
+      <p className="text-green-500 font-semibold">
+        — {name}
+      </p>
     </div>
   );
 }
