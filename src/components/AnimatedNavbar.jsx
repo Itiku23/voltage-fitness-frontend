@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { motion } from "framer-motion"
 import { Link, useLocation } from "react-router-dom"
 import { Home, User, Dumbbell, Laptop } from "lucide-react"
@@ -14,8 +13,10 @@ export default function AnimatedNavbar() {
   ]
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:top-6 md:bottom-auto">
-      <div className="flex items-center gap-3 bg-black/70 border border-gray-800 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg pointer-events-auto">
+    <div className="fixed bottom-6 md:top-6 left-1/2 -translate-x-1/2 z-50">
+
+      <div className="flex items-center gap-3 bg-black/60 border border-gray-700 backdrop-blur-xl px-2 py-2 rounded-full shadow-2xl">
+
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = location.pathname === item.path
@@ -24,28 +25,34 @@ export default function AnimatedNavbar() {
             <Link
               key={item.name}
               to={item.path}
-              className={`relative text-sm font-semibold px-6 py-2 rounded-full transition-colors ${
-                isActive
-                  ? "text-green-500"
-                  : "text-gray-400 hover:text-green-400"
-              }`}
+              className="relative px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
             >
-              <span className="hidden md:inline">{item.name}</span>
-              <span className="md:hidden">
-                <Icon size={18} strokeWidth={2.5} />
+              {/* TEXT / ICON */}
+              <span className={`hidden md:inline ${
+                isActive ? "text-white" : "text-gray-400"
+              }`}>
+                {item.name}
               </span>
 
+              <span className="md:hidden text-gray-300">
+                <Icon size={18} />
+              </span>
+
+              {/* ACTIVE BACKGROUND */}
               {isActive && (
                 <motion.div
-                  layoutId="lamp"
-                  className="absolute inset-0 bg-green-500/10 rounded-full -z-10"
+                  layoutId="navHighlight"
+                  className="absolute inset-0 rounded-full bg-green-500/20 border border-green-500/40 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
                   transition={{
                     type: "spring",
                     stiffness: 300,
-                    damping: 30,
+                    damping: 25,
                   }}
                 />
               )}
+
+              {/* HOVER GLOW */}
+              <div className="absolute inset-0 rounded-full opacity-0 hover:opacity-100 transition bg-green-500/10" />
             </Link>
           )
         })}
