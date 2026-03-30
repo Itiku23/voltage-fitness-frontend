@@ -9,7 +9,7 @@ export default function Layout() {
       <AnimatedNavbar />
 
       {/* PAGE CONTENT */}
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-28 md:pt-24">
         <Outlet />
       </main>
 

@@ -14,8 +14,8 @@ export default function AnimatedNavbar() {
   ]
 
   return (
-    <div className="fixed bottom-6 sm:top-6 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center gap-3 bg-black/70 border border-gray-800 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:top-6 md:bottom-auto">
+      <div className="flex items-center gap-3 bg-black/70 border border-gray-800 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg pointer-events-auto">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = location.pathname === item.path
