@@ -13,9 +13,10 @@ export default function AnimatedNavbar() {
   ]
 
   return (
-    <div className="fixed bottom-6 md:top-6 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed bottom-6 md:top-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none">
 
-      <div className="flex items-center gap-3 bg-black/60 border border-gray-700 backdrop-blur-xl px-2 py-2 rounded-full shadow-2xl">
+      {/* NAV CONTAINER */}
+      <div className="flex items-center gap-3 bg-black/60 border border-gray-700 backdrop-blur-xl px-2 py-2 rounded-full shadow-2xl pointer-events-auto">
 
         {navItems.map((item) => {
           const Icon = item.icon
@@ -27,13 +28,14 @@ export default function AnimatedNavbar() {
               to={item.path}
               className="relative px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300"
             >
-              {/* TEXT / ICON */}
+              {/* TEXT */}
               <span className={`hidden md:inline ${
-                isActive ? "text-white" : "text-gray-400"
+                isActive ? "text-white" : "text-gray-400 hover:text-green-400"
               }`}>
                 {item.name}
               </span>
 
+              {/* ICON (mobile) */}
               <span className="md:hidden text-gray-300">
                 <Icon size={18} />
               </span>
@@ -42,7 +44,7 @@ export default function AnimatedNavbar() {
               {isActive && (
                 <motion.div
                   layoutId="navHighlight"
-                  className="absolute inset-0 rounded-full bg-green-500/20 border border-green-500/40 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
+                  className="absolute inset-0 rounded-full bg-green-500/20 border border-green-500/40 shadow-[0_0_20px_rgba(34,197,94,0.4)] -z-10"
                   transition={{
                     type: "spring",
                     stiffness: 300,
@@ -51,8 +53,8 @@ export default function AnimatedNavbar() {
                 />
               )}
 
-              {/* HOVER GLOW */}
-              <div className="absolute inset-0 rounded-full opacity-0 hover:opacity-100 transition bg-green-500/10" />
+              {/* HOVER EFFECT */}
+              <div className="absolute inset-0 rounded-full opacity-0 hover:opacity-100 transition bg-green-500/10 -z-10" />
             </Link>
           )
         })}
