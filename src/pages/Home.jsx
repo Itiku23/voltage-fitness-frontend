@@ -25,8 +25,7 @@ export default function Home() {
 
             <p className="text-gray-300 text-lg mb-10">
               Performance athlete & discipline-focused coach helping serious
-              individuals build strength, structure, and mental toughness —
-              in and out of sport.
+              individuals build strength, structure, and mental toughness.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -59,21 +58,21 @@ export default function Home() {
 
             <ProgramCard
               title="Personal Training"
-              desc="One-on-one coaching built around strength, discipline, and results."
+              desc="One-on-one coaching built around strength and discipline."
               link="/personal-training"
               image="/personal-training.jpg"
             />
 
             <ProgramCard
               title="Online Coaching"
-              desc="Structured remote training with accountability and support."
+              desc="Structured remote training with accountability."
               link="/online-coaching"
               image="/online-coaching.jpg"
             />
 
             <ProgramCard
               title="Athlete Conditioning"
-              desc="High-performance conditioning for competitive athletes."
+              desc="High-performance training for competitive athletes."
               link="/athlete-conditioning"
               image="/athlete-conditioning.jpg"
             />
@@ -92,18 +91,71 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
             <TestimonialCard
-              quote="My speed and conditioning improved massively in 8 weeks. Training structure was elite."
+              quote="My speed and conditioning improved massively in 8 weeks."
               name="Combat Athlete"
             />
 
             <TestimonialCard
-              quote="I stopped guessing in the gym. Every session had purpose and progression."
+              quote="I stopped guessing in the gym. Every session had purpose."
               name="Field Sport Athlete"
             />
 
             <TestimonialCard
-              quote="Discipline and accountability changed everything — not just my fitness."
+              quote="Discipline and accountability changed everything."
               name="Online Coaching Client"
+            />
+
+          </div>
+        </Reveal>
+      </section>
+
+      {/* PRICING */}
+      <section className="px-6 py-28 bg-gray-950">
+        <h3 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          Coaching Options
+        </h3>
+
+        <Reveal delay={0.3}>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+            <PricingCard
+              title="Personal Training"
+              price="₦40,000"
+              period="/month"
+              features={[
+                "1-on-1 sessions",
+                "Custom program",
+                "Accountability",
+                "Performance coaching"
+              ]}
+              link="/personal-training"
+            />
+
+            <PricingCard
+              title="Online Coaching"
+              price="₦25,000"
+              period="/month"
+              highlight
+              features={[
+                "Structured training plan",
+                "Weekly check-ins",
+                "Form feedback",
+                "Direct support"
+              ]}
+              link="/online-coaching"
+            />
+
+            <PricingCard
+              title="Athlete Conditioning"
+              price="₦50,000"
+              period="/month"
+              features={[
+                "Sport-specific training",
+                "Speed & power",
+                "Injury prevention",
+                "Competition prep"
+              ]}
+              link="/athlete-conditioning"
             />
 
           </div>
@@ -121,7 +173,7 @@ export default function Home() {
 
             <p className="text-gray-400 mb-8">
               Performance athlete & discipline-focused trainer helping serious
-              individuals build strength, structure, and elite-level discipline.
+              individuals build strength and elite discipline.
             </p>
 
             <Link
@@ -145,27 +197,23 @@ export default function Home() {
   );
 }
 
-/* ---------- PROGRAM CARD (UPDATED WITH IMAGE) ---------- */
+/* PROGRAM CARD */
 function ProgramCard({ title, desc, link, image }) {
   return (
     <Link to={link} className="group block">
       <div className="relative h-72 rounded-2xl overflow-hidden border border-gray-800">
 
-        {/* IMAGE */}
         <img
           src={image}
           alt={title}
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500"
         />
 
-        {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition"></div>
 
-        {/* CONTENT */}
         <div className="relative z-10 p-6 h-full flex flex-col justify-end">
           <h4 className="text-xl font-semibold mb-2">{title}</h4>
           <p className="text-gray-300 text-sm mb-4">{desc}</p>
-
           <span className="text-green-500 font-semibold">
             View Program →
           </span>
@@ -176,16 +224,54 @@ function ProgramCard({ title, desc, link, image }) {
   );
 }
 
-/* ---------- TESTIMONIAL CARD ---------- */
+/* TESTIMONIAL CARD */
 function TestimonialCard({ quote, name }) {
   return (
-    <div className="bg-gray-950 border border-gray-800 rounded-2xl p-8 transform hover:scale-105 transition duration-300">
-      <p className="text-gray-300 mb-6 italic">
-        “{quote}”
+    <div className="bg-gray-950 border border-gray-800 rounded-2xl p-8 hover:scale-105 transition">
+      <p className="text-gray-300 mb-6 italic">“{quote}”</p>
+      <p className="text-green-500 font-semibold">— {name}</p>
+    </div>
+  );
+}
+
+/* PRICING CARD */
+function PricingCard({ title, price, period, features, link, highlight }) {
+  return (
+    <div
+      className={`relative rounded-2xl p-8 border transition hover:scale-105 ${
+        highlight
+          ? "bg-green-600 text-black border-green-500"
+          : "bg-black text-white border-gray-800"
+      }`}
+    >
+      {highlight && (
+        <span className="absolute top-4 right-4 text-xs bg-black text-green-400 px-3 py-1 rounded-full">
+          MOST POPULAR
+        </span>
+      )}
+
+      <h4 className="text-xl font-bold mb-4">{title}</h4>
+
+      <p className="text-3xl font-extrabold mb-6">
+        {price} <span className="text-sm">{period}</span>
       </p>
-      <p className="text-green-500 font-semibold">
-        — {name}
-      </p>
+
+      <ul className="space-y-2 mb-8">
+        {features.map((f, i) => (
+          <li key={i}>✔ {f}</li>
+        ))}
+      </ul>
+
+      <Link
+        to={link}
+        className={`block text-center py-3 rounded-xl font-semibold ${
+          highlight
+            ? "bg-black text-green-400"
+            : "bg-green-600"
+        }`}
+      >
+        Get Started
+      </Link>
     </div>
   );
 }
