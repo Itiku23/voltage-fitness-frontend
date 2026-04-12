@@ -1,17 +1,23 @@
 import { Outlet } from "react-router-dom";
 import AnimatedNavbar from "./components/AnimatedNavbar";
 import WhatsAppButton from "./components/WhatsAppButton";
+import StickyCTA from "./components/StickyCTA";
 
 export default function Layout() {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col">
-      
+      <AnimatedNavbar />
+<WhatsAppButton />
+
+{/* ✅ ADD THIS */}
+<StickyCTA />
+
       <AnimatedNavbar />
 
       {/* ✅ ADD THIS */}
       <WhatsAppButton />
 
-      <main className="flex-1 pt-28 md:pt-24">
+      <main className="flex-1 pt-28 md:pt-24 pb-20">
         <Outlet />
       </main>
 
