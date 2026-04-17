@@ -70,6 +70,26 @@ export default function AthleteConditioning() {
           </ol>
         </div>
 
+{/* PRICING */}
+<section className="mt-16">
+  <h2 className="text-2xl font-bold mb-6 text-green-500">
+    Pricing
+  </h2>
+
+  <div className="bg-gray-950 border border-gray-800 rounded-2xl p-8">
+    <p className="text-3xl font-extrabold mb-4">
+      ₦50,000 <span className="text-sm text-gray-400">/month</span>
+    </p>
+
+    <ul className="space-y-3 text-gray-300 mb-6">
+      <li>✔ Sport-specific conditioning</li>
+      <li>✔ Speed & power development</li>
+      <li>✔ Injury prevention</li>
+      <li>✔ Competition prep</li>
+    </ul>
+  </div>
+</section>
+
         {/* CTA */}
         <div className="mt-12 flex flex-col sm:flex-row gap-4">
           <a

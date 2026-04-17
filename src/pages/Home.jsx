@@ -109,59 +109,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* PRICING */}
-      <section className="px-6 py-28 bg-gray-950">
-        <h3 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          Coaching Options
-        </h3>
-
-        <Reveal delay={0.3}>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-            <PricingCard
-              title="Personal Training"
-              price="₦40,000"
-              period="/month"
-              features={[
-                "1-on-1 sessions",
-                "Custom program",
-                "Accountability",
-                "Performance coaching"
-              ]}
-              link="/personal-training"
-            />
-
-            <PricingCard
-              title="Online Coaching"
-              price="₦25,000"
-              period="/month"
-              highlight
-              features={[
-                "Structured training plan",
-                "Weekly check-ins",
-                "Form feedback",
-                "Direct support"
-              ]}
-              link="/online-coaching"
-            />
-
-            <PricingCard
-              title="Athlete Conditioning"
-              price="₦50,000"
-              period="/month"
-              features={[
-                "Sport-specific training",
-                "Speed & power",
-                "Injury prevention",
-                "Competition prep"
-              ]}
-              link="/athlete-conditioning"
-            />
-
-          </div>
-        </Reveal>
-      </section>
-
+      
       {/* ABOUT */}
       <section className="px-6 py-24 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
