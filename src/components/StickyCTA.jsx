@@ -9,7 +9,7 @@ export default function StickyCTA() {
         href="https://wa.me/2349131101149"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 text-center bg-green-500 text-black py-3 rounded-xl font-bold"
+        className="fixed bottom-0 left-0 w-full z-40 md:hidden bg-black border-t border-gray-800 px-4 py-3 flex gap-3"
       >
         WhatsApp
       </a>
