@@ -1,5 +1,6 @@
 import Reveal from "../components/Reveal";
 import { Link } from "react-router-dom";
+import Testimonials from "../components/Testimonials"
 
 export default function Home() {
   return (
@@ -81,34 +82,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="px-6 py-24 bg-black">
-        <h3 className="text-3xl font-bold text-center mb-14">
-          Athlete Results & Client Feedback
-        </h3>
-
-        <Reveal delay={0.25}>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-            <TestimonialCard
-              quote="My speed and conditioning improved massively in 8 weeks."
-              name="Combat Athlete"
-            />
-
-            <TestimonialCard
-              quote="I stopped guessing in the gym. Every session had purpose."
-              name="Field Sport Athlete"
-            />
-
-            <TestimonialCard
-              quote="Discipline and accountability changed everything."
-              name="Online Coaching Client"
-            />
-
-          </div>
-        </Reveal>
-      </section>
-
+<Testimonials />
       
       {/* ABOUT */}
       <section className="px-6 py-24 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
